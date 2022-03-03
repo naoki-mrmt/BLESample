@@ -10,8 +10,9 @@
 		7F45CF4027CEF45100C5FF42 /* BLESampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF3F27CEF45100C5FF42 /* BLESampleApp.swift */; };
 		7F45CF4427CEF45300C5FF42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F45CF4327CEF45300C5FF42 /* Assets.xcassets */; };
 		7F45CF4727CEF45300C5FF42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F45CF4627CEF45300C5FF42 /* Preview Assets.xcassets */; };
-		7F45CF4E27CEF5E400C5FF42 /* BluetoothSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF4D27CEF5E400C5FF42 /* BluetoothSample.swift */; };
 		7F45CF5027CEF5F800C5FF42 /* BLESampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF4F27CEF5F800C5FF42 /* BLESampleView.swift */; };
+		7F45CF5227CEFB1B00C5FF42 /* BLESampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF5127CEFB1B00C5FF42 /* BLESampleViewModel.swift */; };
+		7F45CF6727D04CA600C5FF42 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF6627D04CA600C5FF42 /* BLE.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +20,9 @@
 		7F45CF3F27CEF45100C5FF42 /* BLESampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESampleApp.swift; sourceTree = "<group>"; };
 		7F45CF4327CEF45300C5FF42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F45CF4627CEF45300C5FF42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7F45CF4D27CEF5E400C5FF42 /* BluetoothSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSample.swift; sourceTree = "<group>"; };
 		7F45CF4F27CEF5F800C5FF42 /* BLESampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESampleView.swift; sourceTree = "<group>"; };
+		7F45CF5127CEFB1B00C5FF42 /* BLESampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESampleViewModel.swift; sourceTree = "<group>"; };
+		7F45CF6627D04CA600C5FF42 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +55,9 @@
 		7F45CF3E27CEF45100C5FF42 /* BLESample */ = {
 			isa = PBXGroup;
 			children = (
-				7F45CF3F27CEF45100C5FF42 /* BLESampleApp.swift */,
-				7F45CF4F27CEF5F800C5FF42 /* BLESampleView.swift */,
-				7F45CF4D27CEF5E400C5FF42 /* BluetoothSample.swift */,
+				7F45CF6627D04CA600C5FF42 /* BLE.swift */,
+				7F45CF5D27CF0A0C00C5FF42 /* Application */,
+				7F45CF5E27CF0A1400C5FF42 /* Screen */,
 				7F45CF4327CEF45300C5FF42 /* Assets.xcassets */,
 				7F45CF4527CEF45300C5FF42 /* Preview Content */,
 			);
@@ -68,6 +70,31 @@
 				7F45CF4627CEF45300C5FF42 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F45CF5D27CF0A0C00C5FF42 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7F45CF3F27CEF45100C5FF42 /* BLESampleApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7F45CF5E27CF0A1400C5FF42 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				7F45CF5F27CF0A2200C5FF42 /* BLESample */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		7F45CF5F27CF0A2200C5FF42 /* BLESample */ = {
+			isa = PBXGroup;
+			children = (
+				7F45CF5127CEFB1B00C5FF42 /* BLESampleViewModel.swift */,
+				7F45CF4F27CEF5F800C5FF42 /* BLESampleView.swift */,
+			);
+			path = BLESample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F45CF4E27CEF5E400C5FF42 /* BluetoothSample.swift in Sources */,
+				7F45CF5227CEFB1B00C5FF42 /* BLESampleViewModel.swift in Sources */,
 				7F45CF5027CEF5F800C5FF42 /* BLESampleView.swift in Sources */,
+				7F45CF6727D04CA600C5FF42 /* BLE.swift in Sources */,
 				7F45CF4027CEF45100C5FF42 /* BLESampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,9 +304,11 @@
 				DEVELOPMENT_TEAM = 3796RW2839;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "このアプリではBLEを使います";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "bluetooth-le";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,9 +335,11 @@
 				DEVELOPMENT_TEAM = 3796RW2839;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "このアプリではBLEを使います";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "bluetooth-le";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
