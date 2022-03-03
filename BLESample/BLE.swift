@@ -7,9 +7,9 @@
 import SwiftUI
 import CoreBluetooth
 
-final class BLE: NSObject, ObservableObject {
+final class BLE: NSObject {
     // MARK: - Property Wrappers
-    @Published private var weightData: String = ""
+    var weightData: String = ""
 
     // MARK: - Properties
     private let serviceUUIDString = "d746652e-9557-11ec-b909-0242ac120002"
@@ -115,8 +115,8 @@ extension BLE: CBPeripheralDelegate {
     
     private func updateWithData(data : Data) {
         if let dataString = String(data: data, encoding: String.Encoding.utf8) {
-            print(dataString)
-            // MARK: - TODO: Textを更新する
+            weightData = dataString
+            debugPrint(weightData)
         }
     }
 
