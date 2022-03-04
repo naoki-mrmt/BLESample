@@ -9,12 +9,12 @@ import SwiftUI
 struct BLESampleView: View {
 
     // MARK: - Property Wrappers
-    @ObservedObject private var bleSampleViewModel = BLESampleViewModel()
+    @ObservedObject var ble = BLE()
 
     // MARK: - Body
     var body: some View {
         VStack {
-            Text(bleSampleViewModel.weightData)
+            Text(ble.weightData)
         } //: VStack
     }
 }

@@ -7,9 +7,9 @@
 import SwiftUI
 import CoreBluetooth
 
-final class BLE: NSObject {
+final class BLE: NSObject, ObservableObject {
     // MARK: - Property Wrappers
-    var weightData: String = ""
+    @Published var weightData: String = ""
 
     // MARK: - Properties
     private let serviceUUIDString = "d746652e-9557-11ec-b909-0242ac120002"
