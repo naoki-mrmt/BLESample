@@ -9,7 +9,7 @@ import SwiftUI
 struct BLESampleView: View {
 
     // MARK: - Property Wrappers
-    @ObservedObject var ble = BLE()
+    @ObservedObject var ble = BluetoothManager()
 
     // MARK: - Body
     var body: some View {

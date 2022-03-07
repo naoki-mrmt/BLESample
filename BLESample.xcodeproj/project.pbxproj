@@ -12,7 +12,7 @@
 		7F45CF4727CEF45300C5FF42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F45CF4627CEF45300C5FF42 /* Preview Assets.xcassets */; };
 		7F45CF5027CEF5F800C5FF42 /* BLESampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF4F27CEF5F800C5FF42 /* BLESampleView.swift */; };
 		7F45CF5227CEFB1B00C5FF42 /* BLESampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF5127CEFB1B00C5FF42 /* BLESampleViewModel.swift */; };
-		7F45CF6727D04CA600C5FF42 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF6627D04CA600C5FF42 /* BLE.swift */; };
+		7F45CF6727D04CA600C5FF42 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F45CF6627D04CA600C5FF42 /* BluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		7F45CF4627CEF45300C5FF42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F45CF4F27CEF5F800C5FF42 /* BLESampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESampleView.swift; sourceTree = "<group>"; };
 		7F45CF5127CEFB1B00C5FF42 /* BLESampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESampleViewModel.swift; sourceTree = "<group>"; };
-		7F45CF6627D04CA600C5FF42 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
+		7F45CF6627D04CA600C5FF42 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 		7F45CF3E27CEF45100C5FF42 /* BLESample */ = {
 			isa = PBXGroup;
 			children = (
-				7F45CF6627D04CA600C5FF42 /* BLE.swift */,
+				7F45CF6627D04CA600C5FF42 /* BluetoothManager.swift */,
 				7F45CF5D27CF0A0C00C5FF42 /* Application */,
 				7F45CF5E27CF0A1400C5FF42 /* Screen */,
 				7F45CF4327CEF45300C5FF42 /* Assets.xcassets */,
@@ -169,7 +169,7 @@
 			files = (
 				7F45CF5227CEFB1B00C5FF42 /* BLESampleViewModel.swift in Sources */,
 				7F45CF5027CEF5F800C5FF42 /* BLESampleView.swift in Sources */,
-				7F45CF6727D04CA600C5FF42 /* BLE.swift in Sources */,
+				7F45CF6727D04CA600C5FF42 /* BluetoothManager.swift in Sources */,
 				7F45CF4027CEF45100C5FF42 /* BLESampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

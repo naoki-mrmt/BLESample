@@ -1,5 +1,5 @@
 //
-//  BLE.swift
+//  BluetoothManager.swift
 //  BLESample
 //
 //
@@ -7,7 +7,7 @@
 import SwiftUI
 import CoreBluetooth
 
-final class BLE: NSObject, ObservableObject {
+final class BluetoothManager: NSObject, ObservableObject {
     // MARK: - Property Wrappers
     @Published var weightData: String = ""
 
@@ -37,7 +37,7 @@ final class BLE: NSObject, ObservableObject {
 }
 
 // MARK: - CBCentralManagerDelegate
-extension BLE: CBCentralManagerDelegate {
+extension BluetoothManager: CBCentralManagerDelegate {
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
@@ -73,7 +73,7 @@ extension BLE: CBCentralManagerDelegate {
 }
 
 // MARK: - CBPeripheralDelegate
-extension BLE: CBPeripheralDelegate {
+extension BluetoothManager: CBPeripheralDelegate {
     
     /// サービス発見時に呼ばれる
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
