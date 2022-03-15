@@ -24,16 +24,20 @@ final class BluetoothManager: NSObject, ObservableObject {
     // MARK: - Initialize
     override init() {
         super.init()
-        setup()
+
+        configure()
     }
-    
-    private func setup() {
+}
+
+// MARK: - configure
+extension BluetoothManager {
+    private func configure() {
         print("setup...\n")
         centralManager = CBCentralManager()
         centralManager.delegate = self as CBCentralManagerDelegate
         serviceUUID = CBUUID(string: serviceUUIDString)
         charcteristicUUIDs = [CBUUID(string: characteristicUUIDString)]
-   }
+    }
 }
 
 // MARK: - CBCentralManagerDelegate
@@ -66,7 +70,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         if error != nil {
             print(error.debugDescription)
-            setup()
+            configure()
             return
         }
     }
@@ -112,7 +116,10 @@ extension BluetoothManager: CBPeripheralDelegate {
         if error != nil { return }
         updateWithData(data: characteristic.value!)
     }
-    
+}
+
+// MARK: - extension
+extension BluetoothManager {
     private func updateWithData(data : Data) {
         if let dataString = String(data: data, encoding: String.Encoding.utf8) {
             weightData = dataString
